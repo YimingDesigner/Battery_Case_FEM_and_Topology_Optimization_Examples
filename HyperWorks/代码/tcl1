@@ -1,0 +1,123 @@
+# -*- coding: utf-8 -*-
+# HyperMesh Tcl脚本 - 钣金电池壳静力学分析及拓扑优化
+
+# ------------------- 模型预处理 -------------------
+# 导入几何模型
+hm_answernext "yes"
+*createmark components 1 "Battery_Housing"
+*importmodel "Battery_Housing.stp"  1 0 0 0 0 0 0 0
+
+# ------------------- 四面体网格划分 -------------------
+# 设置全局网格参数
+*createmark elements 1 "all"
+*meshparamqualitydetach
+*setmeshbardisplay 1
+*setedgelength 1 0.01  # 设置单元尺寸0.01mm
+*setelementtype 11     # 设置为四面体单元
+
+# 执行自动四面体划分
+*createmark components 1 "Battery_Housing"
+*checkelems 1 0 0 0 0 0 0
+*tetmesh "Battery_Housing" 1 0 0 1 0.5 0.7 1 0 0 0
+
+# 检查网格质量
+*createmark elements 1 "all"
+*checkelems 1 1 1 1 1 1 1  # 雅可比>0.5，长宽比<20
+*meshqualitycheck 1
+
+# ------------------- 材料定义 -------------------
+# 定义铝合金材料
+mat create "Aluminum_6061" \
+    cardimage="MAT1" \
+    E=7.0e+4 \      # 弹性模量70GPa
+    NU=0.33 \       # 泊松比
+    RHO=2.7e-9 \    # 密度2.7g/mm³
+    TREF=25.0       # 参考温度
+
+# 分配材料属性
+*createmark components 1 "Battery_Housing"
+*updatemark components 1 1
+*attributeupdatecomponent components 1 "material" "Aluminum_6061" 0 0 0
+
+# ------------------- 工况定义 -------------------
+# 静态载荷工况
+loadcollector create "Static_Load" -cardimage "LOAD"
+*createmark surfaces 1 "Battery_Area"  # 选择承载面
+pressures create "Pressure_Load" \
+    magnitude=1.0 \    # 单位MPa（根据实际计算调整）
+    components="Battery_Housing"
+
+# 固定约束
+loadcollector create "Fixed_Constraint" -cardimage "SPC"
+*createmark nodes 1 "Mounting_Points"  # 选择安装点
+spcs create "Fix_All" \
+    dofs=[1,2,3,4,5,6] \  # 全约束
+    entities=nodes \
+    component="Battery_Housing"
+
+# ------------------- 静力学分析设置 -------------------
+# 创建载荷步
+subcase create "Static_Analysis"
+analysis type "STATICS"
+desvar linkage subcase "Static_Analysis"
+
+# 关联载荷和约束
+*subcaselinkcase "Static_Analysis" \
+    loads="Pressure_Load" \
+    spcs="Fix_All"
+
+# 设置输出请求
+output set "STRESS" "ALL"
+output set "STRAIN" "ALL"
+output set "DISPLACEMENT" "ALL"
+
+# ------------------- 拓扑优化设置 -------------------
+# 定义设计空间
+*createmark elements 1 "Design_Area"
+desvar create "Topo_Design" \
+    type="PSOLID" \
+    material="Aluminum_6061" \
+    mingdim=3.0 \        # 最小结构尺寸
+    design=1
+
+# 优化响应定义
+dresp1 create "Compliance" \
+    type=ENERGY
+dresp1 create "Volume_Frac" \
+    type=VOLFRAC
+
+# 定义优化约束
+dcstrn create "Max_Stress" \
+    type=STRESS \
+    upper=300 \         # 许用应力300MPa
+    components="Aluminum_6061"
+
+# 设置优化目标
+optimization setup \
+    objective="Compliance" \
+    objectiveweight=1.0 \
+    constraints=["Volume_Frac <= 0.3"] \  # 体积保留30%
+    algorithm="OC" \
+    maxiter=50
+
+# ------------------- 模式重复设置 -------------------
+# 定义主从区域（示例）
+*patternrepeat create \
+    master="Master_Section" \
+    slaves=["Section_1", "Section_2"] \
+    direction=[1,0,0] \
+    spacing=50.0
+
+# 拔模约束设置
+dconstraint create "Draft_Angle" \
+    type=DTPL \
+    angle=3.0 \         # 拔模角度3°
+    direction=[0,0,1]  # 拔模方向
+
+# ------------------- 提交计算 -------------------
+export analysis "Battery_Optimization.fem"  \
+    format="OptiStruct" \
+    overwrite
+
+# 调用OptiStruct求解器
+exec os –nproc 4 –memory 4gb Battery_Optimization.fem 

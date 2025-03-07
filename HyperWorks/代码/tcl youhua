@@ -1,0 +1,10 @@
+# 多工况优化权重设置
+dscreen create "Multi-Case" \
+    subcases=["Static","Vibration","Impact"] \
+    weights=[0.6,0.3,0.1]
+
+# 制造约束强化
+dconstraint create "Min_Thickness" \
+    type=MINDIM \
+    value=2.0 \         # 最小厚度2mm
+    components="Design_Area"

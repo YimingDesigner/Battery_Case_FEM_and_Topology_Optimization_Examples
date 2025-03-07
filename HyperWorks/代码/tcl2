@@ -1,0 +1,3 @@
+# 结果自动导出
+output set "H3D" "ALL"
+export result "Optimization_Result.h3d" format="HyperMesh_binary"

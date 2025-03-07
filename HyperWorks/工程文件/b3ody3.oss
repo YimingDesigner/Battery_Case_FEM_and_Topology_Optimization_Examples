@@ -1,0 +1,10 @@
+input_file                     E:/HM123/b3ody3
+output_file                    E:/HM123/b3ody3.stl
+output_code                    3
+autobead                       1  0.300  1
+isosurface                     1  3  0.300
+laplacian_smoothing            10  30.000  1
+
+ALTDOCTAG "`Fp]PVnbm1rmRaWbb[OcO_hmqh\gbjlE?FT8NjT;1O[ghXMDHH@_0Qf2W^:6@iIpkITM6HM6@^h4raH74G8n\6qG0rjB3A\?:A9UqfTMP]UnRgVg"
+ADI0.1.0 2024-04-21T21:51:11 0of1 OS10.0
+ENDDOCTAG

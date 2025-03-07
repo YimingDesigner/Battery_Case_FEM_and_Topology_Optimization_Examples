@@ -1,0 +1,3109 @@
+ ************************************************************************
+ **                                                                    **
+ **                                                                    **
+ **                     Altair OptiStruct(TM) 2022                     **
+ **                                                                    **
+ **             Advanced Engineering Analysis, Design and              **
+ **        Optimization Software from Altair Engineering, Inc.         **
+ **                                                                    **
+ **   OptiStruct includes an enhanced proprietary version of NASTRAN   **
+ **                                                                    **
+ **                                                                    **
+ **             Windows 10  (Build 9200)  DESKTOP-L6N30QU              **
+ **      12 CPU:  11th Gen Intel(R) Core(TM) i7-11600H @ 2.90GHz       **
+ **                    7088 MB RAM,  17209 MB swap                     **
+ **                                                                    **
+ ** Build: 1110680uwn33220_Ce64RB68UH14M:201153-000  46004004000000004 **
+ ************************************************************************
+ **  COPYRIGHT (C) 1996-2022                 Altair Engineering, Inc.  **
+ ** All Rights Reserved.  Copyright notice does not imply publication. **
+ **         Contains trade secrets of Altair Engineering, Inc.         **
+ ** Decompilation or disassembly of this software strictly prohibited. **
+ ************************************************************************
+ 
+  
+ *** OptiStruct defaults set from:
+   install config file: E:/Program Files/Altair/2022/hwsolvers/optistruct.cfg.
+  
+  
+ NOTE # 9199
+ MSGLMT=STRICT is active, all messages will be printed.
+ You can suppress some less important warning messages by use of
+  MSGLMT=BRIEF or UNREF (in config file or in the input data).
+  
+ 1 DOPTPRM(s) were set:
+    DISCRETE,     3.0
+  
+ NOTE # 1929
+ Created RAM scratch area: total size 200 MB.
+  
+  
+  
+ NOTE # 1852
+ AUTOMATIC SCREENING is activated.
+ Use DSCREEN,AUTO,OFF to disable automatic screening.
+  
+ *** INFORMATION # 6363
+ The user-defined MINDIM= 6.0000e+02 on DTPL card 1 is unreasonably
+ large compared to the average mesh size = 1.0875e-02.
+ Resetting to MINDIM= 1.3050e-01 based on the average mesh size.
+  
+ *** INFORMATION # 6356
+ MAXDIM constraint is activated on DTPL card 1. MINGAP constraint of
+ the same value as MAXDIM is automatically turned on. MAXDIM and MINGAP
+ constraints introduce significant restrictions to the design problem.
+ 
+
+************************************************************************
+
+OPTIMIZATION FILE AND PARAMETER INFORMATION :
+---------------------------------------------
+
+  FEM model file               : E:/HM123/b3ody3.fem
+  Output files prefix          : E:/HM123/b3ody3
+  Model read from files:
+ (*1)	    E:/HM123/b3ody3.fem
+
+************************************************************************
+
+ 
+
+************************************************************************
+
+FINITE ELEMENT MODEL DATA INFORMATION :
+---------------------------------------
+
+  Total # of Grids (Structural)        :      6675
+  Total # of Elements                  :     20715
+  Total # of Degrees of Freedom        :     19422
+  (Structural)
+  Total # of Non-zero Stiffness Terms  :    326088
+
+ 
+  Element Type Information
+  ------------------------
+
+   CTETRA   Elements   :    20715
+
+  Load and Boundary Information
+  -----------------------------
+
+   LOAD and TEMP Sets:         1
+   SPC   Sets        :         1
+
+  Material and Property Information
+  ---------------------------------
+
+   PSOLID Cards      :         2
+   MAT1   Cards      :         1
+
+************************************************************************
+
+ 
+
+************************************************************************
+
+OPTIMIZATION PROBLEM PARAMETERS :
+---------------------------------
+
+ Objective Function  : Minimize Compliance
+
+ ------------------
+ Response Summary :
+ ------------------
+
+ Number of volume fraction responses   :          1
+ Number of compliance responses        :          1
+
+   ------------------------
+   Static Subcase Summary :
+   ------------------------
+
+   ----------   --------  -------  --------------------- 
+   Subcase ID    SPC ID   LOAD ID  Preloading Subcase ID
+   ----------   --------  -------  --------------------- 
+        1            2          1
+   ----------   --------  -------  --------------------- 
+
+   ---------------------------
+   Design Parameters Summary :
+   ---------------------------
+
+   Total # of topology design elements             :     16770
+   Total # of topology cards                       :         1
+ 
+   Total Volume of Design Material :   2.1984E-02
+     Total Mass of Design Material :   6.0015E-08
+     Volume of Non-Design Material :   4.9570E-03
+       Mass of Non-Design Material :   1.3533E-08
+
+   Solid Design Elements  :  PSOLID
+   ---------------------    --------
+                               1
+ 
+
+   ---------------------------------
+   Optimization Parameters Summary :
+   ---------------------------------
+
+   Initial Material Fraction [0,1] :   0.3000
+   Minimum Element Volume Fraction :   1.0000E-02
+   Discreteness Parameter          :   3.0000
+
+   Topology Optimization Method    :   Density Method
+   Maximum Number of Iterations    :        80
+ 
+   Convergence Tolerance           :   5.0000E-03
+   Step Size (Topology)            :   0.5000
+ 
+   Checkerboard Control            :   On (1 - Global Averaging)
+
+   Run Type                        :   Topology Optimization
+
+ -------------------------------
+ Topology Optimization Summary :
+ -------------------------------
+
+ -------- ----------- ----------- -----------
+ DTPL ID    Minimum     Maximum     Minimum  
+          Member Size Member Size  Gap Size  
+ -------- ----------- ----------- -----------
+        1  0.1305E+00  0.1200E+04  0.1200E+04            
+ -------- ----------- ----------- -----------
+
+ -------- ------- ------- ----------- ----------- ----------- ----------- -----------
+ DTPL ID  Pattern Pattern  Draw Dir.   Stamping     No Hole    Extrusion   Overhang    
+           Repet.  Group. Constraints Constraints Constraints Constraints Constraints
+ -------- ------- ------- ----------- ----------- ----------- ----------- -----------
+        1   NONE  1-PLANE     NONE        NONE        NONE        NONE        NONE   
+ -------- ------- ------- ----------- ----------- ----------- ----------- -----------
+
+   Restart from previous solution  :   No
+   Run at location                 : E:/HM123/
+   Scratch file directory          : E:/HM123/
+                                     Free space:    34.306 GB
+   Number of CPU processors        :          1
+
+
+************************************************************************
+
+ 
+
+************************************************************************
+
+MEMORY ESTIMATION INFORMATION :
+-------------------------------
+
+ Solver Type is:  Sparse-Matrix Solver
+                  Direct Method
+ 
+ Static Memory (RAM) Allocated in Preprocessor           :     800 MB
+   In addition a ramdisk area was allocated in memory    :     200 MB
+ MUMPS Solver will Run In-Core with Estimated Memory     :      47 MB
+ Estimated Total Memory (RAM)                            :    1047 MB
+ 
+ Estimated Memory (RAM) for Out-of-Core Solution         :     209 MB
+ Estimated Memory (RAM) for In-Core Solution             :     236 MB
+ (Note: The Minimum Memory Requirement is limited by Optimization Module.)   
+ 
+DISK SPACE ESTIMATION INFORMATION :
+-----------------------------------
+
+ Estimated Disk Space for Output Data Files              :      66 MB
+ Estimated Scratch Disk Space for In-Core Solution       :      11 MB
+ Estimated Scratch Disk Space for Out of Core Solution   :      36 MB
+
+************************************************************************
+
+
+BEGINNING OPTIMIZATION SOLUTION ....
+
+
+************************************************************************
+
+OPTIMIZATION HISTORY INFORMATION :
+----------------------------------
+
+  
+ITERATION   0
+  
+ Element # 13057, element type TETRA.
+ WARNING - Outside of recommended range: Edge Angle =    77.400    
+           upper limit =    75.000    
+  
+ Element # 13084, element type TETRA.
+ WARNING - Outside of recommended range: Face Vertex Angle =    10.598    
+           lower limit =    15.000    
+ WARNING - Outside of recommended range: Edge Angle =    79.204    
+           upper limit =    75.000    
+  
+ Element # 13113, element type TETRA.
+ WARNING - Outside of recommended range: Face Vertex Angle =    13.445    
+           lower limit =    15.000    
+  
+ Element # 13250, element type TETRA.
+ WARNING - Outside of recommended range: Face Vertex Angle =    14.971    
+           lower limit =    15.000    
+
+ NOTE : other similar error/warning messages were suppressed,
+        use PARAM,CHECKEL,FULL to obtain full report
+
+  
+ Element # 13493, element type TETRA.
+ WARNING - Outside of recommended range: Edge Angle =    75.327    
+           upper limit =    75.000    
+
+ Element Quality Check Summary
+ -----------------------------
+ Total # of elements that exceeded recommended range (warning) =    96
+ Note: Only element with the highest violation of each check is listed below.
+
+ Recommended range violations:
+ ------------------------------------------------------------------------------
+ Element     Property          # of     Recommended Range    Max.  Viol.  Elem.
+                               Viol.     Lower     Upper    Value  type    No.
+ ------- ------------------- -------- --------- --------- --------- --- -------
+ TETRA   Edge Angle                42        --     75.00     83.51  U    15572
+ TETRA   Face Vertex Angle         74     15.00    165.00     10.15  L    16901
+ 
+  
+ (Scratch disk space usage for starting iteration = 11 MB)
+(Running in-core solution)
+
+Objective Function (Minimize COMPL) =  1.14419E+06
+Maximum Constraint Violation %      =  0.11287E-11
+Design Volume Fraction              =  3.00000E-01   Mass     =  3.15372E-08
+Discreteness Index                  =         0.00
+ 
+Density     %
+-------------
+0.0-0.1   0.0   
+0.1-0.2   0.0   
+0.2-0.3 100.0   
+0.3-0.4   0.0   
+0.4-0.5   0.0   
+0.5-0.6   0.0   
+0.6-0.7   0.0   
+0.7-0.8   0.0   
+0.8-0.9   0.0   
+0.9-1.0   0.0   
+
+ Subcase   Compliance     Epsilon
+       1  1.144188E+06  8.225061E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   1.144E+06 MIN
+       2 VOLFR volf             --       --  TOTL   3.000E-01  <  3.000E-01    0.0 A
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+  
+ITERATION   1
+
+Objective Function (Minimize COMPL) =  4.89314E+05   % change =       -57.23
+Maximum Constraint Violation %      =  0.92377E-03
+Design Volume Fraction              =  3.00003E-01   Mass     =  3.15374E-08
+Discreteness Index                  =         0.00
+ 
+Density     %
+-------------
+0.0-0.1   0.0   
+0.1-0.2  14.1   
+0.2-0.3  41.7   
+0.3-0.4  21.4   
+0.4-0.5  22.8   
+0.5-0.6   0.0   
+0.6-0.7   0.0   
+0.7-0.8   0.0   
+0.8-0.9   0.0   
+0.9-1.0   0.0   
+
+ Subcase   Compliance     Epsilon
+       1  4.893144E+05 -1.234780E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   4.893E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.000E-01  <  3.000E-01    0.0 A
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+  
+ITERATION   2
+
+Objective Function (Minimize COMPL) =  2.81669E+05   % change =       -42.44
+Maximum Constraint Violation %      =  0.24849E+01
+Design Volume Fraction              =  3.07455E-01   Mass     =  3.19846E-08
+Discreteness Index                  =         0.00
+ 
+Density     %
+-------------
+0.0-0.1   9.4   
+0.1-0.2  12.6   
+0.2-0.3  34.8   
+0.3-0.4  16.1   
+0.4-0.5  10.8   
+0.5-0.6  10.8   
+0.6-0.7   5.5   
+0.7-0.8   0.0   
+0.8-0.9   0.0   
+0.9-1.0   0.0   
+
+ Subcase   Compliance     Epsilon
+       1  2.816689E+05  2.529430E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   2.817E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.075E-01  <  3.000E-01    2.5 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.075E-01  <  3.000E-01    2.5 V
+------------------------------------------------------------------------------------
+  
+ITERATION   3
+
+Objective Function (Minimize COMPL) =  1.87286E+05   % change =       -33.51
+Maximum Constraint Violation %      =  0.58466E+01
+Design Volume Fraction              =  3.17540E-01   Mass     =  3.25899E-08
+Discreteness Index                  =         0.00
+ 
+Density     %
+-------------
+0.0-0.1  12.5   
+0.1-0.2  12.2   
+0.2-0.3  30.9   
+0.3-0.4  16.5   
+0.4-0.5   7.8   
+0.5-0.6   7.7   
+0.6-0.7   7.9   
+0.7-0.8   3.9   
+0.8-0.9   0.7   
+0.9-1.0   0.1   
+
+ Subcase   Compliance     Epsilon
+       1  1.872863E+05  2.001520E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   1.873E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.175E-01  <  3.000E-01    5.8 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.175E-01  <  3.000E-01    5.8 V
+------------------------------------------------------------------------------------
+  
+ITERATION   4
+
+Objective Function (Minimize COMPL) =  1.41861E+05   % change =       -24.25
+Maximum Constraint Violation %      =  0.91684E+01
+Design Volume Fraction              =  3.27505E-01   Mass     =  3.31880E-08
+Discreteness Index                  =         0.02
+ 
+Density     %
+-------------
+0.0-0.1  13.8   
+0.1-0.2  14.4   
+0.2-0.3  25.8   
+0.3-0.4  16.0   
+0.4-0.5   8.2   
+0.5-0.6   5.6   
+0.6-0.7   6.6   
+0.7-0.8   5.9   
+0.8-0.9   3.2   
+0.9-1.0   0.6   
+
+ Subcase   Compliance     Epsilon
+       1  1.418615E+05 -2.351096E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   1.419E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.275E-01  <  3.000E-01    9.2 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.275E-01  <  3.000E-01    9.2 V
+------------------------------------------------------------------------------------
+  
+ITERATION   5
+
+Objective Function (Minimize COMPL) =  1.17482E+05   % change =       -17.19
+Maximum Constraint Violation %      =  0.11817E+02
+Design Volume Fraction              =  3.35450E-01   Mass     =  3.36648E-08
+Discreteness Index                  =         0.03
+ 
+Density     %
+-------------
+0.0-0.1  15.2   
+0.1-0.2  15.3   
+0.2-0.3  21.6   
+0.3-0.4  15.0   
+0.4-0.5   8.7   
+0.5-0.6   6.1   
+0.6-0.7   5.9   
+0.7-0.8   6.2   
+0.8-0.9   4.7   
+0.9-1.0   1.1   
+
+ Subcase   Compliance     Epsilon
+       1  1.174822E+05 -2.209748E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   1.175E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.354E-01  <  3.000E-01   11.8 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.354E-01  <  3.000E-01   11.8 V
+------------------------------------------------------------------------------------
+  
+ITERATION   6
+
+Objective Function (Minimize COMPL) =  1.03733E+05   % change =       -11.70
+Maximum Constraint Violation %      =  0.13896E+02
+Design Volume Fraction              =  3.41689E-01   Mass     =  3.40392E-08
+Discreteness Index                  =         0.04
+ 
+Density     %
+-------------
+0.0-0.1  16.0   
+0.1-0.2  16.9   
+0.2-0.3  18.5   
+0.3-0.4  13.7   
+0.4-0.5   8.9   
+0.5-0.6   6.8   
+0.6-0.7   5.9   
+0.7-0.8   6.0   
+0.8-0.9   5.5   
+0.9-1.0   1.8   
+
+ Subcase   Compliance     Epsilon
+       1  1.037333E+05  1.641299E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   1.037E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.417E-01  <  3.000E-01   13.9 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.417E-01  <  3.000E-01   13.9 V
+------------------------------------------------------------------------------------
+  
+ITERATION   7
+
+Objective Function (Minimize COMPL) =  9.58606E+04   % change =        -7.59
+Maximum Constraint Violation %      =  0.15285E+02
+Design Volume Fraction              =  3.45854E-01   Mass     =  3.42892E-08
+Discreteness Index                  =         0.05
+ 
+Density     %
+-------------
+0.0-0.1  16.9   
+0.1-0.2  16.8   
+0.2-0.3  17.2   
+0.3-0.4  12.8   
+0.4-0.5   9.1   
+0.5-0.6   6.9   
+0.6-0.7   6.1   
+0.7-0.8   5.8   
+0.8-0.9   6.2   
+0.9-1.0   2.1   
+
+ Subcase   Compliance     Epsilon
+       1  9.586062E+04  3.773819E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   9.586E+04 MIN
+       2 VOLFR volf             --       --  TOTL   3.459E-01  <  3.000E-01   15.3 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.459E-01  <  3.000E-01   15.3 V
+------------------------------------------------------------------------------------
+  
+ITERATION   8
+
+Objective Function (Minimize COMPL) =  9.37227E+04   % change =        -2.23
+Maximum Constraint Violation %      =  0.14985E+02
+Design Volume Fraction              =  3.44955E-01   Mass     =  3.42352E-08
+Discreteness Index                  =         0.06
+ 
+Density     %
+-------------
+0.0-0.1  17.5   
+0.1-0.2  17.5   
+0.2-0.3  16.3   
+0.3-0.4  12.2   
+0.4-0.5   8.8   
+0.5-0.6   7.3   
+0.6-0.7   6.0   
+0.7-0.8   5.9   
+0.8-0.9   6.0   
+0.9-1.0   2.5   
+
+ Subcase   Compliance     Epsilon
+       1  9.372271E+04 -3.083575E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   9.372E+04 MIN
+       2 VOLFR volf             --       --  TOTL   3.450E-01  <  3.000E-01   15.0 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.450E-01  <  3.000E-01   15.0 V
+------------------------------------------------------------------------------------
+  
+ITERATION   9
+
+Objective Function (Minimize COMPL) =  9.21491E+04   % change =        -1.68
+Maximum Constraint Violation %      =  0.14771E+02
+Design Volume Fraction              =  3.44312E-01   Mass     =  3.41966E-08
+Discreteness Index                  =         0.07
+ 
+Density     %
+-------------
+0.0-0.1  18.2   
+0.1-0.2  17.4   
+0.2-0.3  15.7   
+0.3-0.4  12.0   
+0.4-0.5   8.9   
+0.5-0.6   7.2   
+0.6-0.7   6.1   
+0.7-0.8   5.9   
+0.8-0.9   6.0   
+0.9-1.0   2.7   
+
+ Subcase   Compliance     Epsilon
+       1  9.214910E+04 -1.089628E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   9.215E+04 MIN
+       2 VOLFR volf             --       --  TOTL   3.443E-01  <  3.000E-01   14.8 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.443E-01  <  3.000E-01   14.8 V
+------------------------------------------------------------------------------------
+  
+ITERATION  10
+
+Objective Function (Minimize COMPL) =  9.09157E+04   % change =        -1.34
+Maximum Constraint Violation %      =  0.14605E+02
+Design Volume Fraction              =  3.43816E-01   Mass     =  3.41669E-08
+Discreteness Index                  =         0.07
+ 
+Density     %
+-------------
+0.0-0.1  18.8   
+0.1-0.2  17.4   
+0.2-0.3  15.2   
+0.3-0.4  11.7   
+0.4-0.5   9.0   
+0.5-0.6   7.3   
+0.6-0.7   6.0   
+0.7-0.8   5.9   
+0.8-0.9   5.9   
+0.9-1.0   2.9   
+
+ Subcase   Compliance     Epsilon
+       1  9.091570E+04 -1.382914E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   9.092E+04 MIN
+       2 VOLFR volf             --       --  TOTL   3.438E-01  <  3.000E-01   14.6 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.438E-01  <  3.000E-01   14.6 V
+------------------------------------------------------------------------------------
+  
+ITERATION  11
+
+Objective Function (Minimize COMPL) =  8.67231E+04   % change =        -4.61
+Maximum Constraint Violation %      =  0.15989E+02
+Design Volume Fraction              =  3.47968E-01   Mass     =  3.44161E-08
+Discreteness Index                  =         0.08
+ 
+Density     %
+-------------
+0.0-0.1  19.2   
+0.1-0.2  16.6   
+0.2-0.3  15.0   
+0.3-0.4  11.6   
+0.4-0.5   8.9   
+0.5-0.6   7.4   
+0.6-0.7   6.3   
+0.7-0.8   5.7   
+0.8-0.9   6.2   
+0.9-1.0   3.2   
+
+ Subcase   Compliance     Epsilon
+       1  8.672310E+04 -1.607500E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   8.672E+04 MIN
+       2 VOLFR volf             --       --  TOTL   3.480E-01  <  3.000E-01   16.0 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.480E-01  <  3.000E-01   16.0 V
+------------------------------------------------------------------------------------
+  
+ITERATION  12
+
+Objective Function (Minimize COMPL) =  8.59409E+04   % change =        -0.90
+Maximum Constraint Violation %      =  0.15872E+02
+Design Volume Fraction              =  3.47615E-01   Mass     =  3.43949E-08
+Discreteness Index                  =         0.08
+ 
+Density     %
+-------------
+0.0-0.1  19.5   
+0.1-0.2  16.7   
+0.2-0.3  14.9   
+0.3-0.4  11.3   
+0.4-0.5   8.8   
+0.5-0.6   7.2   
+0.6-0.7   6.4   
+0.7-0.8   5.6   
+0.8-0.9   6.2   
+0.9-1.0   3.4   
+
+ Subcase   Compliance     Epsilon
+       1  8.594089E+04 -4.192480E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   8.594E+04 MIN
+       2 VOLFR volf             --       --  TOTL   3.476E-01  <  3.000E-01   15.9 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.476E-01  <  3.000E-01   15.9 V
+------------------------------------------------------------------------------------
+  
+ITERATION  13
+
+Objective Function (Minimize COMPL) =  8.52984E+04   % change =        -0.75
+Maximum Constraint Violation %      =  0.15777E+02
+Design Volume Fraction              =  3.47331E-01   Mass     =  3.43778E-08
+Discreteness Index                  =         0.09
+ 
+Density     %
+-------------
+0.0-0.1  19.8   
+0.1-0.2  16.6   
+0.2-0.3  14.5   
+0.3-0.4  11.5   
+0.4-0.5   8.8   
+0.5-0.6   7.2   
+0.6-0.7   6.3   
+0.7-0.8   5.6   
+0.8-0.9   6.2   
+0.9-1.0   3.5   
+
+ Subcase   Compliance     Epsilon
+       1  8.529837E+04 -1.726474E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   8.530E+04 MIN
+       2 VOLFR volf             --       --  TOTL   3.473E-01  <  3.000E-01   15.8 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.473E-01  <  3.000E-01   15.8 V
+------------------------------------------------------------------------------------
+  
+ITERATION  14
+
+Objective Function (Minimize COMPL) =  8.47551E+04   % change =        -0.64
+Maximum Constraint Violation %      =  0.15698E+02
+Design Volume Fraction              =  3.47094E-01   Mass     =  3.43636E-08
+Discreteness Index                  =         0.09
+ 
+Density     %
+-------------
+0.0-0.1  20.1   
+0.1-0.2  16.5   
+0.2-0.3  14.2   
+0.3-0.4  11.5   
+0.4-0.5   8.8   
+0.5-0.6   7.2   
+0.6-0.7   6.2   
+0.7-0.8   5.7   
+0.8-0.9   6.2   
+0.9-1.0   3.5   
+
+ Subcase   Compliance     Epsilon
+       1  8.475513E+04 -7.805192E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   8.476E+04 MIN
+       2 VOLFR volf             --       --  TOTL   3.471E-01  <  3.000E-01   15.7 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.471E-01  <  3.000E-01   15.7 V
+------------------------------------------------------------------------------------
+  
+ITERATION  15
+
+Objective Function (Minimize COMPL) =  8.42850E+04   % change =        -0.55
+Maximum Constraint Violation %      =  0.15630E+02
+Design Volume Fraction              =  3.46890E-01   Mass     =  3.43514E-08
+Discreteness Index                  =         0.09
+ 
+Density     %
+-------------
+0.0-0.1  20.4   
+0.1-0.2  16.3   
+0.2-0.3  14.1   
+0.3-0.4  11.6   
+0.4-0.5   8.7   
+0.5-0.6   7.2   
+0.6-0.7   6.2   
+0.7-0.8   5.7   
+0.8-0.9   6.2   
+0.9-1.0   3.6   
+
+ Subcase   Compliance     Epsilon
+       1  8.428503E+04  2.720983E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   8.429E+04 MIN
+       2 VOLFR volf             --       --  TOTL   3.469E-01  <  3.000E-01   15.6 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.469E-01  <  3.000E-01   15.6 V
+------------------------------------------------------------------------------------
+  
+ITERATION  16
+
+Objective Function (Minimize COMPL) =  8.38699E+04   % change =        -0.49
+Maximum Constraint Violation %      =  0.15570E+02
+Design Volume Fraction              =  3.46711E-01   Mass     =  3.43406E-08
+Discreteness Index                  =         0.09
+ 
+Density     %
+-------------
+0.0-0.1  20.6   
+0.1-0.2  16.3   
+0.2-0.3  13.9   
+0.3-0.4  11.6   
+0.4-0.5   8.8   
+0.5-0.6   7.2   
+0.6-0.7   6.2   
+0.7-0.8   5.6   
+0.8-0.9   6.2   
+0.9-1.0   3.7   
+
+ Subcase   Compliance     Epsilon
+       1  8.386995E+04  1.433157E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   8.387E+04 MIN
+       2 VOLFR volf             --       --  TOTL   3.467E-01  <  3.000E-01   15.6 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.467E-01  <  3.000E-01   15.6 V
+------------------------------------------------------------------------------------
+  
+ITERATION  17
+
+Objective Function (Minimize COMPL) =  8.34982E+04   % change =        -0.44
+Maximum Constraint Violation %      =  0.15517E+02
+Design Volume Fraction              =  3.46551E-01   Mass     =  3.43311E-08
+Discreteness Index                  =         0.09
+ 
+Density     %
+-------------
+0.0-0.1  20.8   
+0.1-0.2  16.1   
+0.2-0.3  13.9   
+0.3-0.4  11.5   
+0.4-0.5   9.0   
+0.5-0.6   7.2   
+0.6-0.7   6.1   
+0.7-0.8   5.5   
+0.8-0.9   6.2   
+0.9-1.0   3.7   
+
+ Subcase   Compliance     Epsilon
+       1  8.349818E+04 -3.875948E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   8.350E+04 MIN
+       2 VOLFR volf             --       --  TOTL   3.466E-01  <  3.000E-01   15.5 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.466E-01  <  3.000E-01   15.5 V
+------------------------------------------------------------------------------------
+  
+ITERATION  18
+
+Objective Function (Minimize COMPL) =  8.31572E+04   % change =        -0.41
+Maximum Constraint Violation %      =  0.15469E+02
+Design Volume Fraction              =  3.46406E-01   Mass     =  3.43223E-08
+Discreteness Index                  =         0.09
+ 
+Density     %
+-------------
+0.0-0.1  21.0   
+0.1-0.2  15.9   
+0.2-0.3  13.7   
+0.3-0.4  11.3   
+0.4-0.5   9.2   
+0.5-0.6   7.2   
+0.6-0.7   6.2   
+0.7-0.8   5.5   
+0.8-0.9   6.2   
+0.9-1.0   3.8   
+
+ Subcase   Compliance     Epsilon
+       1  8.315721E+04  2.131413E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   8.316E+04 MIN
+       2 VOLFR volf             --       --  TOTL   3.464E-01  <  3.000E-01   15.5 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.464E-01  <  3.000E-01   15.5 V
+------------------------------------------------------------------------------------
+  
+ITERATION  19
+
+Objective Function (Minimize COMPL) =  8.28379E+04   % change =        -0.38
+Maximum Constraint Violation %      =  0.15424E+02
+Design Volume Fraction              =  3.46272E-01   Mass     =  3.43143E-08
+Discreteness Index                  =         0.10
+ 
+Density     %
+-------------
+0.0-0.1  21.2   
+0.1-0.2  15.8   
+0.2-0.3  13.7   
+0.3-0.4  11.3   
+0.4-0.5   9.3   
+0.5-0.6   7.1   
+0.6-0.7   6.1   
+0.7-0.8   5.5   
+0.8-0.9   6.1   
+0.9-1.0   3.8   
+
+ Subcase   Compliance     Epsilon
+       1  8.283793E+04  4.110615E-14
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   8.284E+04 MIN
+       2 VOLFR volf             --       --  TOTL   3.463E-01  <  3.000E-01   15.4 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.463E-01  <  3.000E-01   15.4 V
+------------------------------------------------------------------------------------
+  
+ITERATION  20
+  Three consecutive iterations have very small changes in both
+  the objective function value and maximum constraint violation.
+    convergence ratio =  3.6303E-03 <   5.0000E-03
+     violation change =     0.000 % <      0.200 %
+     (No feasible design can be obtained.)
+
+Objective Function (Minimize COMPL) =  8.25383E+04   % change =        -0.36
+Maximum Constraint Violation %      =  0.15382E+02
+Design Volume Fraction              =  3.46146E-01   Mass     =  3.43067E-08
+Discreteness Index                  =         0.10
+ 
+Density     %
+-------------
+0.0-0.1  21.5   
+0.1-0.2  15.6   
+0.2-0.3  13.5   
+0.3-0.4  11.2   
+0.4-0.5   9.4   
+0.5-0.6   7.2   
+0.6-0.7   6.1   
+0.7-0.8   5.5   
+0.8-0.9   6.1   
+0.9-1.0   3.9   
+
+ Subcase   Compliance     Epsilon
+       1  8.253829E+04  2.891403E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   8.254E+04 MIN
+       2 VOLFR volf             --       --  TOTL   3.461E-01  <  3.000E-01   15.4 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.461E-01  <  3.000E-01   15.4 V
+------------------------------------------------------------------------------------
+  
+ITERATION  21
+
+Objective Function (Minimize COMPL) =  1.82872E+05   % change =       121.56
+Maximum Constraint Violation %      =  0.14908E+02
+Design Volume Fraction              =  3.44723E-01   Mass     =  3.42213E-08
+Discreteness Index                  =         0.13
+ 
+Density     %
+-------------
+0.0-0.1  24.6   
+0.1-0.2  16.1   
+0.2-0.3  11.6   
+0.3-0.4   9.7   
+0.4-0.5   8.3   
+0.5-0.6   6.8   
+0.6-0.7   5.9   
+0.7-0.8   5.5   
+0.8-0.9   6.5   
+0.9-1.0   4.9   
+
+ Subcase   Compliance     Epsilon
+       1  1.828722E+05  2.193066E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   1.829E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.447E-01  <  3.000E-01   14.9 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.447E-01  <  3.000E-01   14.9 V
+------------------------------------------------------------------------------------
+  
+ITERATION  22
+
+Objective Function (Minimize COMPL) =  1.81263E+05   % change =        -0.88
+Maximum Constraint Violation %      =  0.82989E+01
+Design Volume Fraction              =  3.24897E-01   Mass     =  3.30314E-08
+Discreteness Index                  =         0.03
+ 
+Density     %
+-------------
+0.0-0.1  21.8   
+0.1-0.2  15.2   
+0.2-0.3  12.9   
+0.3-0.4  12.2   
+0.4-0.5  11.7   
+0.5-0.6   9.0   
+0.6-0.7   7.6   
+0.7-0.8   6.7   
+0.8-0.9   1.9   
+0.9-1.0   1.1   
+
+ Subcase   Compliance     Epsilon
+       1  1.812629E+05  3.644744E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   1.813E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.249E-01  <  3.000E-01    8.3 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.249E-01  <  3.000E-01    8.3 V
+------------------------------------------------------------------------------------
+  
+ITERATION  23
+
+Objective Function (Minimize COMPL) =  1.63938E+05   % change =        -9.56
+Maximum Constraint Violation %      =  0.93121E+01
+Design Volume Fraction              =  3.27936E-01   Mass     =  3.32139E-08
+Discreteness Index                  =         0.07
+ 
+Density     %
+-------------
+0.0-0.1  21.9   
+0.1-0.2  16.3   
+0.2-0.3  13.7   
+0.3-0.4  12.4   
+0.4-0.5  10.1   
+0.5-0.6   7.1   
+0.6-0.7   6.0   
+0.7-0.8   5.3   
+0.8-0.9   4.7   
+0.9-1.0   2.5   
+
+ Subcase   Compliance     Epsilon
+       1  1.639383E+05  2.258171E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   1.639E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.279E-01  <  3.000E-01    9.3 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.279E-01  <  3.000E-01    9.3 V
+------------------------------------------------------------------------------------
+  
+ITERATION  24
+
+Objective Function (Minimize COMPL) =  1.53131E+05   % change =        -6.59
+Maximum Constraint Violation %      =  0.10423E+02
+Design Volume Fraction              =  3.31268E-01   Mass     =  3.34138E-08
+Discreteness Index                  =         0.04
+ 
+Density     %
+-------------
+0.0-0.1  21.4   
+0.1-0.2  14.6   
+0.2-0.3  14.1   
+0.3-0.4  12.8   
+0.4-0.5  11.0   
+0.5-0.6   8.0   
+0.6-0.7   6.1   
+0.7-0.8   5.7   
+0.8-0.9   4.8   
+0.9-1.0   1.5   
+
+ Subcase   Compliance     Epsilon
+       1  1.531311E+05  1.201168E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   1.531E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.313E-01  <  3.000E-01   10.4 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.313E-01  <  3.000E-01   10.4 V
+------------------------------------------------------------------------------------
+  
+ITERATION  25
+
+Objective Function (Minimize COMPL) =  1.45394E+05   % change =        -5.05
+Maximum Constraint Violation %      =  0.11374E+02
+Design Volume Fraction              =  3.34121E-01   Mass     =  3.35851E-08
+Discreteness Index                  =         0.06
+ 
+Density     %
+-------------
+0.0-0.1  21.7   
+0.1-0.2  14.8   
+0.2-0.3  14.2   
+0.3-0.4  12.5   
+0.4-0.5  10.2   
+0.5-0.6   7.6   
+0.6-0.7   5.8   
+0.7-0.8   5.7   
+0.8-0.9   5.1   
+0.9-1.0   2.3   
+
+ Subcase   Compliance     Epsilon
+       1  1.453943E+05 -9.688311E-14
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   1.454E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.341E-01  <  3.000E-01   11.4 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.341E-01  <  3.000E-01   11.4 V
+------------------------------------------------------------------------------------
+  
+ITERATION  26
+
+Objective Function (Minimize COMPL) =  1.40994E+05   % change =        -3.03
+Maximum Constraint Violation %      =  0.11966E+02
+Design Volume Fraction              =  3.35897E-01   Mass     =  3.36916E-08
+Discreteness Index                  =         0.06
+ 
+Density     %
+-------------
+0.0-0.1  21.6   
+0.1-0.2  14.4   
+0.2-0.3  14.2   
+0.3-0.4  12.5   
+0.4-0.5  10.6   
+0.5-0.6   7.8   
+0.6-0.7   5.9   
+0.7-0.8   5.6   
+0.8-0.9   5.1   
+0.9-1.0   2.3   
+
+ Subcase   Compliance     Epsilon
+       1  1.409944E+05 -2.724722E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   1.410E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.359E-01  <  3.000E-01   12.0 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.359E-01  <  3.000E-01   12.0 V
+------------------------------------------------------------------------------------
+  
+ITERATION  27
+
+Objective Function (Minimize COMPL) =  1.38018E+05   % change =        -2.11
+Maximum Constraint Violation %      =  0.12345E+02
+Design Volume Fraction              =  3.37036E-01   Mass     =  3.37600E-08
+Discreteness Index                  =         0.06
+ 
+Density     %
+-------------
+0.0-0.1  21.7   
+0.1-0.2  14.3   
+0.2-0.3  14.3   
+0.3-0.4  12.4   
+0.4-0.5  10.4   
+0.5-0.6   7.6   
+0.6-0.7   6.0   
+0.7-0.8   5.6   
+0.8-0.9   5.3   
+0.9-1.0   2.5   
+
+ Subcase   Compliance     Epsilon
+       1  1.380181E+05 -3.820960E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   1.380E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.370E-01  <  3.000E-01   12.3 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.370E-01  <  3.000E-01   12.3 V
+------------------------------------------------------------------------------------
+  
+ITERATION  28
+
+Objective Function (Minimize COMPL) =  1.36043E+05   % change =        -1.43
+Maximum Constraint Violation %      =  0.12573E+02
+Design Volume Fraction              =  3.37720E-01   Mass     =  3.38010E-08
+Discreteness Index                  =         0.06
+ 
+Density     %
+-------------
+0.0-0.1  21.9   
+0.1-0.2  14.2   
+0.2-0.3  14.2   
+0.3-0.4  12.2   
+0.4-0.5  10.3   
+0.5-0.6   7.7   
+0.6-0.7   6.1   
+0.7-0.8   5.5   
+0.8-0.9   5.4   
+0.9-1.0   2.5   
+
+ Subcase   Compliance     Epsilon
+       1  1.360425E+05 -2.909473E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   1.360E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.377E-01  <  3.000E-01   12.6 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.377E-01  <  3.000E-01   12.6 V
+------------------------------------------------------------------------------------
+  
+ITERATION  29
+
+Objective Function (Minimize COMPL) =  1.34606E+05   % change =        -1.06
+Maximum Constraint Violation %      =  0.12719E+02
+Design Volume Fraction              =  3.38156E-01   Mass     =  3.38272E-08
+Discreteness Index                  =         0.06
+ 
+Density     %
+-------------
+0.0-0.1  21.9   
+0.1-0.2  14.1   
+0.2-0.3  14.3   
+0.3-0.4  12.3   
+0.4-0.5  10.2   
+0.5-0.6   7.5   
+0.6-0.7   6.2   
+0.7-0.8   5.4   
+0.8-0.9   5.5   
+0.9-1.0   2.6   
+
+ Subcase   Compliance     Epsilon
+       1  1.346058E+05  6.637808E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   1.346E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.382E-01  <  3.000E-01   12.7 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.382E-01  <  3.000E-01   12.7 V
+------------------------------------------------------------------------------------
+  
+ITERATION  30
+
+Objective Function (Minimize COMPL) =  1.33522E+05   % change =        -0.80
+Maximum Constraint Violation %      =  0.12809E+02
+Design Volume Fraction              =  3.38427E-01   Mass     =  3.38435E-08
+Discreteness Index                  =         0.07
+ 
+Density     %
+-------------
+0.0-0.1  22.0   
+0.1-0.2  14.1   
+0.2-0.3  14.1   
+0.3-0.4  12.3   
+0.4-0.5  10.2   
+0.5-0.6   7.5   
+0.6-0.7   6.2   
+0.7-0.8   5.3   
+0.8-0.9   5.5   
+0.9-1.0   2.6   
+
+ Subcase   Compliance     Epsilon
+       1  1.335223E+05 -2.449981E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   1.335E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.384E-01  <  3.000E-01   12.8 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.384E-01  <  3.000E-01   12.8 V
+------------------------------------------------------------------------------------
+  
+ITERATION  31
+
+Objective Function (Minimize COMPL) =  1.32673E+05   % change =        -0.64
+Maximum Constraint Violation %      =  0.12866E+02
+Design Volume Fraction              =  3.38597E-01   Mass     =  3.38537E-08
+Discreteness Index                  =         0.07
+ 
+Density     %
+-------------
+0.0-0.1  22.1   
+0.1-0.2  14.0   
+0.2-0.3  14.4   
+0.3-0.4  12.2   
+0.4-0.5  10.1   
+0.5-0.6   7.4   
+0.6-0.7   6.3   
+0.7-0.8   5.3   
+0.8-0.9   5.5   
+0.9-1.0   2.8   
+
+ Subcase   Compliance     Epsilon
+       1  1.326731E+05 -8.322708E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   1.327E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.386E-01  <  3.000E-01   12.9 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.386E-01  <  3.000E-01   12.9 V
+------------------------------------------------------------------------------------
+  
+ITERATION  32
+
+Objective Function (Minimize COMPL) =  1.31974E+05   % change =        -0.53
+Maximum Constraint Violation %      =  0.12900E+02
+Design Volume Fraction              =  3.38700E-01   Mass     =  3.38598E-08
+Discreteness Index                  =         0.07
+ 
+Density     %
+-------------
+0.0-0.1  22.1   
+0.1-0.2  14.1   
+0.2-0.3  14.4   
+0.3-0.4  12.0   
+0.4-0.5  10.0   
+0.5-0.6   7.4   
+0.6-0.7   6.3   
+0.7-0.8   5.3   
+0.8-0.9   5.5   
+0.9-1.0   2.8   
+
+ Subcase   Compliance     Epsilon
+       1  1.319735E+05 -3.427002E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   1.320E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.387E-01  <  3.000E-01   12.9 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.387E-01  <  3.000E-01   12.9 V
+------------------------------------------------------------------------------------
+  
+ITERATION  33
+
+Objective Function (Minimize COMPL) =  1.31370E+05   % change =        -0.46
+Maximum Constraint Violation %      =  0.12922E+02
+Design Volume Fraction              =  3.38765E-01   Mass     =  3.38637E-08
+Discreteness Index                  =         0.07
+ 
+Density     %
+-------------
+0.0-0.1  22.2   
+0.1-0.2  14.0   
+0.2-0.3  14.4   
+0.3-0.4  12.0   
+0.4-0.5  10.0   
+0.5-0.6   7.3   
+0.6-0.7   6.4   
+0.7-0.8   5.3   
+0.8-0.9   5.5   
+0.9-1.0   2.9   
+
+ Subcase   Compliance     Epsilon
+       1  1.313699E+05  1.063397E-14
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   1.314E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.388E-01  <  3.000E-01   12.9 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.388E-01  <  3.000E-01   12.9 V
+------------------------------------------------------------------------------------
+  
+ITERATION  34
+
+Objective Function (Minimize COMPL) =  1.30832E+05   % change =        -0.41
+Maximum Constraint Violation %      =  0.12935E+02
+Design Volume Fraction              =  3.38806E-01   Mass     =  3.38662E-08
+Discreteness Index                  =         0.07
+ 
+Density     %
+-------------
+0.0-0.1  22.3   
+0.1-0.2  14.0   
+0.2-0.3  14.4   
+0.3-0.4  11.9   
+0.4-0.5   9.9   
+0.5-0.6   7.3   
+0.6-0.7   6.4   
+0.7-0.8   5.3   
+0.8-0.9   5.6   
+0.9-1.0   2.9   
+
+ Subcase   Compliance     Epsilon
+       1  1.308316E+05 -5.561317E-14
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   1.308E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.388E-01  <  3.000E-01   12.9 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.388E-01  <  3.000E-01   12.9 V
+------------------------------------------------------------------------------------
+  
+ITERATION  35
+
+Objective Function (Minimize COMPL) =  1.30333E+05   % change =        -0.38
+Maximum Constraint Violation %      =  0.12946E+02
+Design Volume Fraction              =  3.38838E-01   Mass     =  3.38681E-08
+Discreteness Index                  =         0.07
+ 
+Density     %
+-------------
+0.0-0.1  22.4   
+0.1-0.2  14.0   
+0.2-0.3  14.4   
+0.3-0.4  11.8   
+0.4-0.5   9.9   
+0.5-0.6   7.3   
+0.6-0.7   6.4   
+0.7-0.8   5.3   
+0.8-0.9   5.5   
+0.9-1.0   2.9   
+
+ Subcase   Compliance     Epsilon
+       1  1.303333E+05 -1.136613E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   1.303E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.388E-01  <  3.000E-01   12.9 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.388E-01  <  3.000E-01   12.9 V
+------------------------------------------------------------------------------------
+  
+ITERATION  36
+  Three consecutive iterations have very small changes in both
+  the objective function value and maximum constraint violation.
+    convergence ratio =  3.5852E-03 <   5.0000E-03
+     violation change =     0.000 % <      0.200 %
+     (No feasible design can be obtained.)
+
+Objective Function (Minimize COMPL) =  1.29868E+05   % change =        -0.36
+Maximum Constraint Violation %      =  0.12954E+02
+Design Volume Fraction              =  3.38863E-01   Mass     =  3.38696E-08
+Discreteness Index                  =         0.08
+ 
+Density     %
+-------------
+0.0-0.1  22.5   
+0.1-0.2  14.1   
+0.2-0.3  14.3   
+0.3-0.4  11.8   
+0.4-0.5   9.9   
+0.5-0.6   7.2   
+0.6-0.7   6.4   
+0.7-0.8   5.3   
+0.8-0.9   5.5   
+0.9-1.0   3.0   
+
+ Subcase   Compliance     Epsilon
+       1  1.298677E+05 -7.574704E-14
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   1.299E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.389E-01  <  3.000E-01   13.0 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.389E-01  <  3.000E-01   13.0 V
+------------------------------------------------------------------------------------
+  
+ITERATION  37
+
+Objective Function (Minimize COMPL) =  2.16101E+05   % change =        66.40
+Maximum Constraint Violation %      =  0.15346E+02
+Design Volume Fraction              =  3.46038E-01   Mass     =  3.43003E-08
+Discreteness Index                  =         0.09
+ 
+Density     %
+-------------
+0.0-0.1  22.6   
+0.1-0.2  14.4   
+0.2-0.3  13.2   
+0.3-0.4  11.1   
+0.4-0.5   9.7   
+0.5-0.6   7.3   
+0.6-0.7   6.4   
+0.7-0.8   5.7   
+0.8-0.9   5.8   
+0.9-1.0   3.7   
+
+ Subcase   Compliance     Epsilon
+       1  2.161007E+05  2.343383E-14
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   2.161E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.460E-01  <  3.000E-01   15.3 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.460E-01  <  3.000E-01   15.3 V
+------------------------------------------------------------------------------------
+  
+ITERATION  38
+
+Objective Function (Minimize COMPL) =  2.08815E+05   % change =        -3.37
+Maximum Constraint Violation %      =  0.13835E+02
+Design Volume Fraction              =  3.41504E-01   Mass     =  3.40281E-08
+Discreteness Index                  =         0.04
+ 
+Density     %
+-------------
+0.0-0.1  21.8   
+0.1-0.2  13.2   
+0.2-0.3  14.0   
+0.3-0.4  12.0   
+0.4-0.5  10.7   
+0.5-0.6   8.1   
+0.6-0.7   7.2   
+0.7-0.8   5.8   
+0.8-0.9   5.3   
+0.9-1.0   1.8   
+
+ Subcase   Compliance     Epsilon
+       1  2.088149E+05  3.227953E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   2.088E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.415E-01  <  3.000E-01   13.8 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.415E-01  <  3.000E-01   13.8 V
+------------------------------------------------------------------------------------
+  
+ITERATION  39
+
+Objective Function (Minimize COMPL) =  2.05682E+05   % change =        -1.50
+Maximum Constraint Violation %      =  0.13489E+02
+Design Volume Fraction              =  3.40467E-01   Mass     =  3.39659E-08
+Discreteness Index                  =         0.06
+ 
+Density     %
+-------------
+0.0-0.1  21.7   
+0.1-0.2  13.2   
+0.2-0.3  14.7   
+0.3-0.4  12.3   
+0.4-0.5  10.5   
+0.5-0.6   8.0   
+0.6-0.7   6.7   
+0.7-0.8   5.5   
+0.8-0.9   5.1   
+0.9-1.0   2.3   
+
+ Subcase   Compliance     Epsilon
+       1  2.056823E+05  3.223346E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   2.057E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.405E-01  <  3.000E-01   13.5 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.405E-01  <  3.000E-01   13.5 V
+------------------------------------------------------------------------------------
+  
+ITERATION  40
+
+Objective Function (Minimize COMPL) =  2.03728E+05   % change =        -0.95
+Maximum Constraint Violation %      =  0.13308E+02
+Design Volume Fraction              =  3.39925E-01   Mass     =  3.39334E-08
+Discreteness Index                  =         0.05
+ 
+Density     %
+-------------
+0.0-0.1  21.5   
+0.1-0.2  12.9   
+0.2-0.3  14.7   
+0.3-0.4  12.6   
+0.4-0.5  10.6   
+0.5-0.6   8.3   
+0.6-0.7   6.8   
+0.7-0.8   5.4   
+0.8-0.9   4.9   
+0.9-1.0   2.2   
+
+ Subcase   Compliance     Epsilon
+       1  2.037279E+05 -1.045708E-12
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   2.037E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.399E-01  <  3.000E-01   13.3 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.399E-01  <  3.000E-01   13.3 V
+------------------------------------------------------------------------------------
+  
+ITERATION  41
+
+Objective Function (Minimize COMPL) =  2.02252E+05   % change =        -0.72
+Maximum Constraint Violation %      =  0.13199E+02
+Design Volume Fraction              =  3.39597E-01   Mass     =  3.39137E-08
+Discreteness Index                  =         0.06
+ 
+Density     %
+-------------
+0.0-0.1  21.6   
+0.1-0.2  13.1   
+0.2-0.3  14.8   
+0.3-0.4  12.7   
+0.4-0.5  10.3   
+0.5-0.6   8.1   
+0.6-0.7   6.7   
+0.7-0.8   5.4   
+0.8-0.9   5.0   
+0.9-1.0   2.2   
+
+ Subcase   Compliance     Epsilon
+       1  2.022524E+05  8.274166E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   2.023E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.396E-01  <  3.000E-01   13.2 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.396E-01  <  3.000E-01   13.2 V
+------------------------------------------------------------------------------------
+  
+ITERATION  42
+
+Objective Function (Minimize COMPL) =  2.00938E+05   % change =        -0.65
+Maximum Constraint Violation %      =  0.13109E+02
+Design Volume Fraction              =  3.39326E-01   Mass     =  3.38974E-08
+Discreteness Index                  =         0.06
+ 
+Density     %
+-------------
+0.0-0.1  21.7   
+0.1-0.2  13.2   
+0.2-0.3  14.6   
+0.3-0.4  12.9   
+0.4-0.5  10.1   
+0.5-0.6   8.1   
+0.6-0.7   6.8   
+0.7-0.8   5.4   
+0.8-0.9   5.0   
+0.9-1.0   2.3   
+
+ Subcase   Compliance     Epsilon
+       1  2.009376E+05 -3.476163E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   2.009E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.393E-01  <  3.000E-01   13.1 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.393E-01  <  3.000E-01   13.1 V
+------------------------------------------------------------------------------------
+  
+ITERATION  43
+
+Objective Function (Minimize COMPL) =  1.99661E+05   % change =        -0.64
+Maximum Constraint Violation %      =  0.13035E+02
+Design Volume Fraction              =  3.39104E-01   Mass     =  3.38841E-08
+Discreteness Index                  =         0.06
+ 
+Density     %
+-------------
+0.0-0.1  21.7   
+0.1-0.2  13.4   
+0.2-0.3  14.7   
+0.3-0.4  12.8   
+0.4-0.5   9.9   
+0.5-0.6   8.1   
+0.6-0.7   6.7   
+0.7-0.8   5.3   
+0.8-0.9   5.1   
+0.9-1.0   2.3   
+
+ Subcase   Compliance     Epsilon
+       1  1.996607E+05  1.749197E-14
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   1.997E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.391E-01  <  3.000E-01   13.0 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.391E-01  <  3.000E-01   13.0 V
+------------------------------------------------------------------------------------
+  
+ITERATION  44
+
+Objective Function (Minimize COMPL) =  1.98335E+05   % change =        -0.66
+Maximum Constraint Violation %      =  0.12965E+02
+Design Volume Fraction              =  3.38894E-01   Mass     =  3.38715E-08
+Discreteness Index                  =         0.06
+ 
+Density     %
+-------------
+0.0-0.1  21.7   
+0.1-0.2  13.4   
+0.2-0.3  14.7   
+0.3-0.4  12.7   
+0.4-0.5   9.8   
+0.5-0.6   7.9   
+0.6-0.7   6.9   
+0.7-0.8   5.3   
+0.8-0.9   5.2   
+0.9-1.0   2.3   
+
+ Subcase   Compliance     Epsilon
+       1  1.983353E+05 -5.223962E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   1.983E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.389E-01  <  3.000E-01   13.0 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.389E-01  <  3.000E-01   13.0 V
+------------------------------------------------------------------------------------
+  
+ITERATION  45
+
+Objective Function (Minimize COMPL) =  1.96918E+05   % change =        -0.71
+Maximum Constraint Violation %      =  0.12891E+02
+Design Volume Fraction              =  3.38674E-01   Mass     =  3.38583E-08
+Discreteness Index                  =         0.06
+ 
+Density     %
+-------------
+0.0-0.1  21.9   
+0.1-0.2  13.5   
+0.2-0.3  14.7   
+0.3-0.4  12.5   
+0.4-0.5   9.7   
+0.5-0.6   7.9   
+0.6-0.7   6.9   
+0.7-0.8   5.3   
+0.8-0.9   5.3   
+0.9-1.0   2.3   
+
+ Subcase   Compliance     Epsilon
+       1  1.969177E+05  3.485052E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   1.969E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.387E-01  <  3.000E-01   12.9 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.387E-01  <  3.000E-01   12.9 V
+------------------------------------------------------------------------------------
+  
+ITERATION  46
+
+Objective Function (Minimize COMPL) =  1.95559E+05   % change =        -0.69
+Maximum Constraint Violation %      =  0.12814E+02
+Design Volume Fraction              =  3.38441E-01   Mass     =  3.38443E-08
+Discreteness Index                  =         0.06
+ 
+Density     %
+-------------
+0.0-0.1  22.0   
+0.1-0.2  13.6   
+0.2-0.3  14.7   
+0.3-0.4  12.3   
+0.4-0.5   9.7   
+0.5-0.6   7.8   
+0.6-0.7   6.9   
+0.7-0.8   5.3   
+0.8-0.9   5.2   
+0.9-1.0   2.4   
+
+ Subcase   Compliance     Epsilon
+       1  1.955589E+05 -1.169755E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   1.956E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.384E-01  <  3.000E-01   12.8 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.384E-01  <  3.000E-01   12.8 V
+------------------------------------------------------------------------------------
+  
+ITERATION  47
+
+Objective Function (Minimize COMPL) =  1.94249E+05   % change =        -0.67
+Maximum Constraint Violation %      =  0.12737E+02
+Design Volume Fraction              =  3.38211E-01   Mass     =  3.38305E-08
+Discreteness Index                  =         0.06
+ 
+Density     %
+-------------
+0.0-0.1  22.2   
+0.1-0.2  13.5   
+0.2-0.3  14.8   
+0.3-0.4  12.2   
+0.4-0.5   9.6   
+0.5-0.6   7.8   
+0.6-0.7   6.9   
+0.7-0.8   5.4   
+0.8-0.9   5.3   
+0.9-1.0   2.4   
+
+ Subcase   Compliance     Epsilon
+       1  1.942492E+05 -3.748678E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   1.942E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.382E-01  <  3.000E-01   12.7 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.382E-01  <  3.000E-01   12.7 V
+------------------------------------------------------------------------------------
+  
+ITERATION  48
+
+Objective Function (Minimize COMPL) =  1.92973E+05   % change =        -0.66
+Maximum Constraint Violation %      =  0.12660E+02
+Design Volume Fraction              =  3.37980E-01   Mass     =  3.38167E-08
+Discreteness Index                  =         0.06
+ 
+Density     %
+-------------
+0.0-0.1  22.4   
+0.1-0.2  13.5   
+0.2-0.3  14.8   
+0.3-0.4  12.0   
+0.4-0.5   9.5   
+0.5-0.6   7.8   
+0.6-0.7   6.9   
+0.7-0.8   5.4   
+0.8-0.9   5.3   
+0.9-1.0   2.5   
+
+ Subcase   Compliance     Epsilon
+       1  1.929727E+05 -3.993671E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   1.930E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.380E-01  <  3.000E-01   12.7 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.380E-01  <  3.000E-01   12.7 V
+------------------------------------------------------------------------------------
+  
+ITERATION  49
+
+Objective Function (Minimize COMPL) =  1.91690E+05   % change =        -0.66
+Maximum Constraint Violation %      =  0.12583E+02
+Design Volume Fraction              =  3.37748E-01   Mass     =  3.38027E-08
+Discreteness Index                  =         0.06
+ 
+Density     %
+-------------
+0.0-0.1  22.5   
+0.1-0.2  13.7   
+0.2-0.3  14.5   
+0.3-0.4  11.9   
+0.4-0.5   9.5   
+0.5-0.6   7.7   
+0.6-0.7   7.0   
+0.7-0.8   5.3   
+0.8-0.9   5.3   
+0.9-1.0   2.5   
+
+ Subcase   Compliance     Epsilon
+       1  1.916896E+05  6.270491E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   1.917E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.377E-01  <  3.000E-01   12.6 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.377E-01  <  3.000E-01   12.6 V
+------------------------------------------------------------------------------------
+  
+ITERATION  50
+
+Objective Function (Minimize COMPL) =  1.90448E+05   % change =        -0.65
+Maximum Constraint Violation %      =  0.12503E+02
+Design Volume Fraction              =  3.37509E-01   Mass     =  3.37884E-08
+Discreteness Index                  =         0.06
+ 
+Density     %
+-------------
+0.0-0.1  22.6   
+0.1-0.2  14.0   
+0.2-0.3  14.2   
+0.3-0.4  11.9   
+0.4-0.5   9.4   
+0.5-0.6   7.7   
+0.6-0.7   7.0   
+0.7-0.8   5.3   
+0.8-0.9   5.3   
+0.9-1.0   2.5   
+
+ Subcase   Compliance     Epsilon
+       1  1.904477E+05  9.211869E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   1.904E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.375E-01  <  3.000E-01   12.5 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.375E-01  <  3.000E-01   12.5 V
+------------------------------------------------------------------------------------
+  
+ITERATION  51
+
+Objective Function (Minimize COMPL) =  1.89410E+05   % change =        -0.54
+Maximum Constraint Violation %      =  0.12428E+02
+Design Volume Fraction              =  3.37285E-01   Mass     =  3.37749E-08
+Discreteness Index                  =         0.07
+ 
+Density     %
+-------------
+0.0-0.1  22.7   
+0.1-0.2  14.2   
+0.2-0.3  13.9   
+0.3-0.4  11.9   
+0.4-0.5   9.4   
+0.5-0.6   7.6   
+0.6-0.7   7.1   
+0.7-0.8   5.3   
+0.8-0.9   5.3   
+0.9-1.0   2.6   
+
+ Subcase   Compliance     Epsilon
+       1  1.894103E+05 -2.102000E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   1.894E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.373E-01  <  3.000E-01   12.4 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.373E-01  <  3.000E-01   12.4 V
+------------------------------------------------------------------------------------
+  
+ITERATION  52
+
+Objective Function (Minimize COMPL) =  1.88529E+05   % change =        -0.47
+Maximum Constraint Violation %      =  0.12363E+02
+Design Volume Fraction              =  3.37089E-01   Mass     =  3.37632E-08
+Discreteness Index                  =         0.07
+ 
+Density     %
+-------------
+0.0-0.1  22.9   
+0.1-0.2  14.3   
+0.2-0.3  13.6   
+0.3-0.4  11.9   
+0.4-0.5   9.4   
+0.5-0.6   7.6   
+0.6-0.7   7.1   
+0.7-0.8   5.4   
+0.8-0.9   5.3   
+0.9-1.0   2.6   
+
+ Subcase   Compliance     Epsilon
+       1  1.885289E+05 -3.210964E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   1.885E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.371E-01  <  3.000E-01   12.4 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.371E-01  <  3.000E-01   12.4 V
+------------------------------------------------------------------------------------
+  
+ITERATION  53
+
+Objective Function (Minimize COMPL) =  1.87763E+05   % change =        -0.41
+Maximum Constraint Violation %      =  0.12306E+02
+Design Volume Fraction              =  3.36919E-01   Mass     =  3.37530E-08
+Discreteness Index                  =         0.07
+ 
+Density     %
+-------------
+0.0-0.1  23.0   
+0.1-0.2  14.2   
+0.2-0.3  13.6   
+0.3-0.4  11.8   
+0.4-0.5   9.4   
+0.5-0.6   7.6   
+0.6-0.7   7.1   
+0.7-0.8   5.4   
+0.8-0.9   5.3   
+0.9-1.0   2.6   
+
+ Subcase   Compliance     Epsilon
+       1  1.877629E+05 -2.256845E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   1.878E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.369E-01  <  3.000E-01   12.3 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.369E-01  <  3.000E-01   12.3 V
+------------------------------------------------------------------------------------
+  
+ITERATION  54
+  Three consecutive iterations have very small changes in both
+  the objective function value and maximum constraint violation.
+    convergence ratio =  3.6299E-03 <   5.0000E-03
+     violation change =     0.000 % <      0.200 %
+     (No feasible design can be obtained.)
+
+Objective Function (Minimize COMPL) =  1.87084E+05   % change =        -0.36
+Maximum Constraint Violation %      =  0.12257E+02
+Design Volume Fraction              =  3.36771E-01   Mass     =  3.37441E-08
+Discreteness Index                  =         0.07
+ 
+Density     %
+-------------
+0.0-0.1  23.2   
+0.1-0.2  14.2   
+0.2-0.3  13.4   
+0.3-0.4  11.8   
+0.4-0.5   9.4   
+0.5-0.6   7.6   
+0.6-0.7   7.0   
+0.7-0.8   5.4   
+0.8-0.9   5.3   
+0.9-1.0   2.7   
+
+ Subcase   Compliance     Epsilon
+       1  1.870838E+05  4.536297E-13
+
+Note : Epsilon = Residual Strain Energy Ratio.
+
+
+                           RETAINED RESPONSES TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Objective    Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value      Reference/     %  
+                           /Model  MID/PID/  /Reg                Constraint
+                           +Frqncy Mode No.                        Bound   
+                           /Times                                          
+------------------------------------------------------------------------------------
+       1 COMPL compl             1       --  TOTL   1.871E+05 MIN
+       2 VOLFR volf             --       --  TOTL   3.368E-01  <  3.000E-01   12.3 V
+------------------------------------------------------------------------------------
+Stress Constraints for Topology/Free-Sizing Optimization                    violated
+------------------------------------------------------------------------------------
+
+                       MOST VIOLATED CONSTRAINTS TABLE
+------------------------------------------------------------------------------------
+Response Type  Response    Subcase Grid/     DOF/   Response     Constraint   Viol.
+User-ID          Label     /RANDPS Element/  Comp     Value        Bound        %  
+                           /Model  MID/PID/  /Reg                          
+                           +Frqncy Mode No.                                
+                           /Times                                          
+------------------------------------------------------------------------------------
+       2 VOLFR volf             --       --  TOTL   3.368E-01  <  3.000E-01   12.3 V
+------------------------------------------------------------------------------------
+
+************************************************************************
+  
+ OPTIMIZATION HAS CONVERGED.
+  
+ INFEASIBLE DESIGN (AT LEAST ONE CONSTRAINT VIOLATED).
+  
+
+************************************************************************
+
+RESOURCE USAGE INFORMATION
+--------------------------
+
+ MAXIMUM MEMORY USED                                       848 MB
+   INCLUDING MEMORY FOR MUMPS                               48 MB
+   IN ADDITION     14 MB MEMORY WAS ALLOCATED FOR TEMPORARY USE
+   IN ADDITION    200 MB RAMDISK AREA WAS ALLOCATED IN MEMORY
+ MAXIMUM DISK SPACE USED                                     8 MB
+   INCLUDING DISK SPACE FOR MUMPS                            7 MB
+
+************************************************************************
+
+
+************************************************************************
+
+COMPUTE TIME INFORMATION
+------------------------
+
+ EXECUTION STARTED                         Sun Apr 21 21:48:58 2024    
+ EXECUTION COMPLETED                       Sun Apr 21 21:51:11 2024    
+ ELAPSED TIME                                         00:02:13
+ CPU TIME                                             00:01:56
+
+************************************************************************
+
+  
+                        ***** END OF REPORT *****
+  
+ For OptiStruct Community Forum, go to the URL:
+ http://www.altair.com/optistruct-community
+ For Altair Community Knowledge Base, go to the URL:
+ http://www.altair.com/knowledge

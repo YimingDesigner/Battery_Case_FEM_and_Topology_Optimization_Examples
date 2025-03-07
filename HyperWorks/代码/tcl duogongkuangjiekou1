@@ -1,0 +1,13 @@
+# 振动工况示例
+loadcollector create "Vibration" -cardimage "DLOAD"
+tabled1 create "PSD_Input" \
+    type=POWER \
+    x=[10,20,...,1000] \  # 频率点
+    y=[0.5,0.3,...,0.8]  # 功率谱密度值
+
+# 冲击工况示例
+loadcollector create "Impact" -cardimage "TLOAD1"
+tload1 create "Shock_Pulse" \
+    type=LOAD \
+    delay=0.01 \         # 冲击持续时间
+    exctid="Impact_Curve"  # 冲击载荷曲线
